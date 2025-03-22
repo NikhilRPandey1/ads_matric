@@ -22,9 +22,8 @@ async def populate_database(
     num_entries: int = 1000, db: AsyncSession = Depends(get_db)
 ):
     try:
-        # Populate dimension tables
         dim_counts = await populate_dimension_tables(db)
-        # Populate fact table
+
         fact_count = await populate_fact_table(db, num_entries)
         return {
             "message": "Database populated successfully",

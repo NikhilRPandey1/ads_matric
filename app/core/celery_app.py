@@ -2,7 +2,7 @@ from celery import Celery
 from app.core.config import settings
 from datetime import timedelta
 
-# Load environment variables
+
 CELERY_BROKER_URL = settings.CELERY_RESULT_BACKEND
 CELERY_BACKEND_URL = settings.CELERY_RESULT_BACKEND
 
