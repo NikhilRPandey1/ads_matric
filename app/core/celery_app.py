@@ -1,5 +1,6 @@
 from celery import Celery
 from app.core.config import settings
+from datetime import timedelta
 
 # Load environment variables
 CELERY_BROKER_URL = settings.CELERY_RESULT_BACKEND
@@ -26,6 +27,6 @@ celery_app.conf.update(
 celery_app.conf.beat_schedule = {
     "log-task-every-6-hours": {
         "task": "app.task.logging_task.log_task",
-        "schedule": 1,
+        "schedule": timedelta(hours=6),
     },
 }
