@@ -11,8 +11,14 @@
 ## Insert 100 record in the database
 ``` python app/populate_db_script.py ```
 
-## Create a .env file at root level of project and setup your database connection path
-``` postgresql+asyncpg://nikhilpandey:root@localhost:5432/ad_metrics_db ```
+## Create a .env file at root level of project and put your info
+``` 
+DATABASE_URL=postgresql+asyncpg://username:password@localhost:5432/ad_metrics_db
+CELERY_BROKER_URL=redis://localhost:6379/0
+CELERY_RESULT_BACKEND=redis://localhost:6379/0
+SECRET_KEY=your-secret-key
+DEBUG=False
+ ```
 
 ## Run the application 
 ``` uvicorn app.main:app ```
