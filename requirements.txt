@@ -37,3 +37,4 @@ typing_extensions==4.12.2
 uvicorn==0.34.0
 faker==37.0.2
 celery==5.4.0
+redis==5.2.1
