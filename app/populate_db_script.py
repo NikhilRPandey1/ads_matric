@@ -5,7 +5,7 @@ from dotenv import load_dotenv
 from faker import Faker
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession
 from sqlalchemy.orm import sessionmaker
-from app.api.accounts.models.matrics import (
+from api.accounts.models.matrics import (
     FactAdBulletinDaily,
     DimDate,
     DimRegion,
